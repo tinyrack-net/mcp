@@ -15,6 +15,14 @@
     "ddg-search": {
       "command": "uvx",
       "args": ["duckduckgo-mcp-server"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/winetree94"]
+    },
+    "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git"]
     }
   }
 }
