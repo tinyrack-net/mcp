@@ -6,10 +6,11 @@ After=network.target
 Type=simple
 User=winetree94
 Group=winetree94
-ExecStart=/bin/sh -c 'uvx mcpo --port 8000 --api-key YOUR_API_KEY --config YOUR_CONFIG_PATH'
+ExecStart=/bin/sh -c 'uvx mcpo --port 8000 --api-key $MCPO_API_KEY --config $MCPO_CONFIG_PATH'
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=always
 RestartSec=5
+EnvironmentFile=/home/winetree94/.mcpo
 Environment=PATH=/home/winetree94/.local/bin:/usr/bin:/bin:/home/linuxbrew/.linuxbrew/bin
 
 [Install]
